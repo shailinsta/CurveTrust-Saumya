@@ -289,9 +289,9 @@ DOI: to be added after the Zenodo release is published.
 @article{mishra2026curvtrust,
   title   = {Reference-anchored neighbourhood-overlap residual for network intrusion analysis and trust-based safety filtering in multi-agent cyber-physical systems},
   author  = {Mishra, Saumya and Mishra, Shailendra},
-  journal = {Computer Networks},
-  year    = {2026},
-  note    = {In press / under review}
+  journal = {},
+  year    = {},
+  note    = {}
 }
 ```
 

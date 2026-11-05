@@ -1,0 +1,59 @@
+{
+  "source": "Extracted from CurvTrust_Computer_Networks_revised.docx (document body order)",
+  "figures": [
+    {
+      "id": "Fig. 1",
+      "file": "fig01_overview.png",
+      "caption": "Overview of CurvTrust-PAI. A shared reference-anchored residual feeds two independently evaluated pathways, a network-flow detector and a swarm trust and safety filter; there is no run-time data exchange between them."
+    },
+    {
+      "id": "Fig. 2",
+      "file": "fig02_pipeline.jpeg",
+      "caption": "Implementation pipeline of CurvTrust-PAI."
+    },
+    {
+      "id": "Fig. 3",
+      "file": "fig03_public_f1.png",
+      "caption": "Per-dataset F1 of all seven configurations on the four public benchmarks (mean ± std over five seeds)."
+    },
+    {
+      "id": "Fig. 4",
+      "file": "fig04_edgeiot_f1.png",
+      "caption": "Per-method F1 on Custom-EdgeIoT (mean ± std over five seeds)."
+    },
+    {
+      "id": "Fig. 5a",
+      "file": "fig05a_noise_public.png",
+      "caption": "F1 against noise amplitude ε — average over the four public datasets."
+    },
+    {
+      "id": "Fig. 5b",
+      "file": "fig05b_noise_edgeiot.png",
+      "caption": "F1 against noise amplitude ε — Custom-EdgeIoT."
+    },
+    {
+      "id": "Fig. 6",
+      "file": "fig06_ablation.png",
+      "caption": "Ablation of residual integration on the four public datasets: F1 of each classifier with and without the residual (mean ± std over five seeds)."
+    },
+    {
+      "id": "Fig. 7",
+      "file": "fig07_trust_dynamics.png",
+      "caption": "Mean trust of honest and compromised agents during a run under the overt (left) and authenticated (right) attack."
+    },
+    {
+      "id": "Fig. 8",
+      "file": "fig08_edgeiot_diagnostics.png",
+      "caption": "Custom-EdgeIoT diagnostics. (a) F1 against the conformal level α; (b) data saturation; (c) learning curves; (d) mean residual and attack recall under clean, random and adaptive-suppression conditions; (e) method comparison on the worker split; (f) noise robustness."
+    },
+    {
+      "id": "Fig. 9",
+      "file": "fig09_scaling.png",
+      "caption": "Wall-clock time of one complete filter step (all agents) against swarm size N (mean ± std over ten repetitions)."
+    }
+  ],
+  "notes": [
+    "Original embedded filenames (image1.png … image12.png) are retained alongside the figXX_* names.",
+    "image8.png and image10.png appear in the package but were not referenced in document body order; kept as originals only."
+  ]
+}

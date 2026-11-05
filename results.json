@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "project": "CurvTrust-PAI",
+    "description": "Reference-anchored neighbourhood-overlap residual for network intrusion analysis and trust-based safety filtering",
+    "authors": ["Saumya Mishra", "Shailendra Mishra"],
+    "note": "This JSON summarises the experimental outcomes reported in the manuscript. Full per-seed tables are produced by the pipeline scripts under results/ when experiments are re-run.",
+    "version": "1.0.0",
+    "generated": "2026-11"
+  },
+  "config_summary": {
+    "seeds": [42, 43, 44, 45, 46],
+    "k": 5,
+    "n_ref": 1000,
+    "alpha_conformal": 0.05,
+    "rf_trees": 120,
+    "rf_depth": 14,
+    "adv_eps": 0.12,
+    "adv_trials": 8,
+    "n_agents": 10,
+    "n_steps": 500,
+    "d_min": 1.5,
+    "attack_window": [0.30, 0.70],
+    "comp_frac": 0.20
+  },
+  "digital": {
+    "summary": {
+      "finding": "Adding the residual did not raise clean F1 above features-only Random Forest. Residual-only conformal detector was weak (F1 ~0.01-0.29 public, ~0.08 Custom-EdgeIoT).",
+      "datasets_evaluated": [
+        "UNSW-NB15",
+        "NF-ToN-IoT-v2",
+        "NF-CSE-CIC-IDS2018-v2",
+        "CIDDS-001",
+        "Custom-EdgeIoT"
+      ]
+    },
+    "clean_f1_approx": {
+      "UNSW-NB15": {
+        "CurvTrust-PAI (full)": 0.99,
+        "RF features-only": 0.99,
+        "Residual conformal": 0.15
+      },
+      "NF-ToN-IoT-v2": {
+        "CurvTrust-PAI (full)": 0.98,
+        "RF features-only": 0.98,
+        "Residual conformal": 0.20
+      },
+      "NF-CSE-CIC-IDS2018-v2": {
+        "CurvTrust-PAI (full)": 0.99,
+        "RF features-only": 0.99,
+        "Residual conformal": 0.12
+      },
+      "CIDDS-001": {
+        "CurvTrust-PAI (full)": 0.97,
+        "RF features-only": 0.97,
+        "Residual conformal": 0.08
+      },
+      "Custom-EdgeIoT": {
+        "CurvTrust-PAI (full)": 0.995,
+        "RF features-only": 0.995,
+        "Residual conformal": 0.08,
+        "AUC_residual_only": 0.437
+      }
+    },
+    "residual_suppression": {
+      "description": "Eight-candidate black-box residual-suppression search (eps=0.12)",
+      "Custom-EdgeIoT": {
+        "clean": {"mean_residual_attack": 0.27, "attack_recall_full": 1.00},
+        "random_perturbation": {"mean_residual_attack": 0.29, "attack_recall_full": 0.95},
+        "adaptive_suppression": {"mean_residual_attack": 0.20, "attack_recall_full": 0.96}
+      },
+      "note": "Recall loss under adaptive search is comparable to random perturbation of the same size; residual is not a single point of failure."
+    },
+    "alpha_sensitivity_Custom-EdgeIoT": {
+      "0.01": {"residual_conformal_f1": 0.02},
+      "0.05": {"residual_conformal_f1": 0.08},
+      "0.20": {"residual_conformal_f1": 0.20},
+      "full_model_f1": 0.995
+    }
+  },
+  "swarm": {
+    "summary": {
+      "finding": "Trust fell during both overt and authenticated attacks. Trust-adaptive filter reduced separation violations and collisions vs unfiltered controller; five seeds showed no clear advantage over fixed 3.0 m margin. Filtering raised goal-tracking error.",
+      "n_agents": 10,
+      "compromised": 2,
+      "attack_window_steps": [150, 350]
+    },
+    "controllers_overt_approx": {
+      "nominal": {
+        "violations_relative": 1.0,
+        "collisions_relative": 1.0,
+        "min_sep_global_m": null,
+        "goal_err_m": 1.63
+      },
+      "fixed_1.5m": {
+        "goal_err_m": null,
+        "mean_min_sep_m": 1.55
+      },
+      "fixed_large_3.0m": {
+        "mean_min_sep_m": 2.63,
+        "goal_err_m": 5.01
+      },
+      "trust_adaptive": {
+        "violation_reduction_vs_nominal": "~98%",
+        "collision_reduction_vs_nominal": "~99%",
+        "mean_min_sep_m": 2.12,
+        "min_sep_global_m": 0.555,
+        "goal_err_m": 5.19,
+        "note": "Required d_min = 1.5 m; global minimum still below requirement because compromised agents bypass the filter."
+      }
+    },
+    "trust_dynamics": {
+      "honest_mean_trust": 0.80,
+      "compromised_overt": "drops to ~0.04 within one step, stays low",
+      "compromised_authenticated": "drops to ~0.2, partial recovery around goal reversals",
+      "identity_score": {
+        "overt": 0.25,
+        "authenticated": 0.95
+      }
+    }
+  },
+  "scaling": {
+    "description": "Wall-clock time of one complete filter step (all agents), sequential, test platform",
+    "points": [
+      {"N": 5, "ms_mean": 1.3},
+      {"N": 10, "ms_mean": 4.5},
+      {"N": 15, "ms_mean": 9.7},
+      {"N": 20, "ms_mean": 17.3},
+      {"N": 30, "ms_mean": 51.0}
+    ],
+    "note": "Growth is approximately quadratic; 51 ms at N=30 is sequential CPU time on the evaluation platform."
+  },
+  "limitations": [
+    "No gain in clean F1 from residual on tabular detectors",
+    "Weak stand-alone conformal detection",
+    "Higher tracking error from filtering",
+    "No demonstrated advantage of trust-adaptive margin over fixed large margin (5 seeds)",
+    "Computation time grows with swarm size",
+    "Record-level random splits may be optimistic; chronological/host-disjoint splits not evaluated",
+    "Adversarial evaluation limited to 8 Gaussian perturbations; not protocol-preserving",
+    "Trust weights set by hand; no ablation of evidence terms"
+  ],
+  "data_availability": {
+    "public_datasets": [
+      "UNSW-NB15",
+      "ToN-IoT / NF-ToN-IoT-v2",
+      "CSE-CIC-IDS2018 / NF-CSE-CIC-IDS2018-v2",
+      "CIDDS-001"
+    ],
+    "custom_edgeiot_and_code": "Deposited at [repository name and DOI to be inserted before submission]",
+    "doi_placeholder": "10.5281/zenodo.xxxxxxx"
+  }
+}

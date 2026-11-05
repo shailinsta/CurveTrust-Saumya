@@ -1,0 +1,7 @@
+| Dataset | Source files | Sample cap | Label and feature handling |
+| --- | --- | --- | --- |
+| UNSW-NB15 | Official training and testing partitions, concatenated | 40,000 | Binary label; id and attack category removed |
+| NF-ToN-IoT-v2 | One NetFlow Parquet file | 30,000 | IP addresses and attack-type fields removed |
+| NF-CSE-CIC-IDS2018-v2 | One NetFlow Parquet file | 30,000 | IP addresses and attack-type fields removed |
+| CIDDS-001 | External-server and OpenStack captures, equal share from each | 30,000 | Class “normal” mapped to 0; “attacker” and “victim” mapped to 1; byte and packet counts with K/M/G suffixes converted to numbers |
+| Custom-EdgeIoT | CSV captures of benign traffic and of DDoS, ransomware and SQL-injection attacks | 30,000 | Label column used where present, otherwise the capture file name; text, payload and address fields excluded; stratified subsample |

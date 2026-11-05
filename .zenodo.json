@@ -1,0 +1,42 @@
+{
+  "title": "CurvTrust-PAI: Reference-anchored neighbourhood-overlap residual for network intrusion analysis and trust-based safety filtering in multi-agent cyber-physical systems",
+  "description": "CurvTrust-PAI evaluates a reference-anchored neighbourhood-overlap residual (absolute deviation of a Jaccard neighbourhood-overlap score from its median over a clean reference set) in two independent settings: (1) network-flow intrusion analysis, where the residual is used as an auxiliary classifier feature and as a stand-alone conformal detector; and (2) trust-conditioned safety filtering in a simulated multi-agent swarm, where the residual is combined with identity, kinematic innovation and graph-isolation evidence to set the separation margin of a relative-degree-two barrier filter. The repository contains the experimental pipeline (digital intrusion detection + swarm trust/HOCBF filter), extracted tables and figures from the manuscript, and aggregated results JSON. Datasets are third-party and not redistributed.",
+  "upload_type": "software",
+  "publication_date": "2026-11-05",
+  "creators": [
+    {
+      "name": "Mishra, Saumya",
+      "affiliation": "Department of Computer Science and Engineering, Motilal Nehru National Institute of Technology Allahabad (MNNIT Allahabad), Prayagraj 211004, Uttar Pradesh, India"
+    },
+    {
+      "name": "Mishra, Shailendra",
+      "affiliation": "Department of Computer Engineering, College of Computer and Information Sciences, Majmaah University, Al-Majmaah 11952, Saudi Arabia",
+      "orcid": ""
+    }
+  ],
+  "keywords": [
+    "Intrusion detection",
+    "Neighbourhood overlap",
+    "Jaccard similarity",
+    "Trust estimation",
+    "Conformal calibration",
+    "Control barrier functions",
+    "Cyber-physical systems",
+    "Multi-agent systems",
+    "IoT security",
+    "Residual anomaly score"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/<your-username>/CurvTrust-PAI",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "access_right": "open",
+  "license": "mit",
+  "communities": [],
+  "version": "1.0.0",
+  "language": "eng",
+  "notes": "DOI placeholder: replace after Zenodo publishes the record. Public datasets (UNSW-NB15, NF-ToN-IoT-v2, NF-CSE-CIC-IDS2018-v2, CIDDS-001) must be obtained from their original sources. Custom-EdgeIoT and full experiment outputs follow the paper data-availability statement."
+}

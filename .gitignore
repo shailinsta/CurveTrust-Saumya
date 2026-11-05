@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Experiment outputs (re-generated locally)
+results_dgx/
+*.parquet
+*.csv
+!results/*.json
+
+# Large local data
+Curve-Test/
+data/
+datasets/
+
+# Logs
+*.log
+logs/

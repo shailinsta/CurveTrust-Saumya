@@ -1,0 +1,10 @@
+Parameter,Value
+Agents / steps / time step,10 / 500 / 0.1 s
+Compromised agents,2 (fraction 0.20)
+Attack window,Steps 150–350
+Minimum separation dmin,1.5 m
+Control limit,2 m s−2
+Margins (fixed / fixed-large / adaptive),1.5 m / 3.0 m / 1.5–4.5 m
+"Trust weights (id, κ, r, q)","0.25, 0.35, 0.25, 0.15"
+"Sigmoid slope β, healthy trust target","10, 0.90"
+Trust smoothing factor,0.5

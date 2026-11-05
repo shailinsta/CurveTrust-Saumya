@@ -1,0 +1,8 @@
+Method,UNSW-NB15,NF-ToN-IoT-v2,NF-CSE-CIC-IDS2018-v2,CIDDS-001
+CurvTrust-PAI (full),0.938 ± 0.001,0.998 ± 0.001,0.900 ± 0.016,0.998 ± 0.003
+RF features-only,≈0.94,≈0.998,≈0.90,≈0.998
+Gradient boosting,≈0.94,≈0.998,≈0.895,≈0.998
+GB + residual,≈0.94,≈0.998,≈0.895,≈0.998
+Logistic regression,≈0.86,≈0.96,≈0.58,≈0.998
+LR + residual,≈0.86,≈0.96,≈0.58,≈0.998
+Residual conformal,≈0.10,≈0.29,≈0.05,≈0.01

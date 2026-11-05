@@ -1,0 +1,56 @@
+[
+  {
+    "paper_table": "Table 1",
+    "file_csv": "table01_related_work.csv",
+    "file_md": "table01_related_work.md",
+    "caption": "Table 1. Summary of representative related work and the gaps addressed by CurvTrust-PAI."
+  },
+  {
+    "paper_table": "Table 2",
+    "file_csv": "table02_datasets.csv",
+    "file_md": "table02_datasets.md",
+    "caption": "Table 2. Datasets, sampling caps and label construction."
+  },
+  {
+    "paper_table": "Table 3",
+    "file_csv": "table03_detector_configs.csv",
+    "file_md": "table03_detector_configs.md",
+    "caption": "Table 3. Detector configurations."
+  },
+  {
+    "paper_table": "Table 4",
+    "file_csv": "table04_swarm_params.csv",
+    "file_md": "table04_swarm_params.md",
+    "caption": "Table 4. Swarm parameters."
+  },
+  {
+    "paper_table": "Table 5",
+    "file_csv": "table05_f1_public.csv",
+    "file_md": "table05_f1_public.md",
+    "caption": "Table 5. F1 on the four public benchmarks (mean \u00b1 std over five seeds)."
+  },
+  {
+    "paper_table": "Table 6",
+    "file_csv": "table06_edgeiot_metrics.csv",
+    "file_md": "table06_edgeiot_metrics.md",
+    "caption": "Table 6. Clean detection metrics on Custom-EdgeIoT (mean \u00b1 std over five seeds)."
+  },
+  {
+    "paper_table": "Table 7",
+    "file_csv": "table07_noise_f1.csv",
+    "file_md": "table07_noise_f1.md",
+    "caption": "Table 7. Approximate F1 under Gaussian noise (read from Fig. 5)."
+  },
+  {
+    "paper_table": "Table 8",
+    "file_csv": "table08_swarm_safety.csv",
+    "file_md": "table08_swarm_safety.md",
+    "caption": "Table 8. Swarm safety metrics under the overt and authenticated attacks (mean \u00b1 std over five seeds)."
+  },
+  {
+    "paper_table": "Table 9",
+    "file_csv": "table09_residual_suppression.csv",
+    "file_md": "table09_residual_suppression.md",
+    "caption": "Table 9. Effect of perturbations on the residual and attack recall on Custom-EdgeIoT."
+  }
+]

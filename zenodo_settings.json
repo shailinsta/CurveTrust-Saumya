@@ -1,0 +1,79 @@
+{
+  "_comment": "Fill these fields in Zenodo UI (Settings → GitHub / New deposit). Values match the manuscript authors and title. After publish, Zenodo assigns the DOI automatically — do not invent one.",
+  "zenodo_account": {
+    "login_method": "GitHub",
+    "note": "Use the same GitHub account that owns the CurvTrust-PAI repository. Authorize Zenodo to access GitHub when prompted."
+  },
+  "github_integration": {
+    "repository_name": "CurvTrust-PAI",
+    "enable_repository_for_archiving": true,
+    "release_tag_to_archive": "v1.0.0",
+    "release_title": "CurvTrust-PAI v1.0.0",
+    "release_description": "Initial public release of CurvTrust-PAI: residual pipeline, swarm trust/HOCBF filter, extracted tables and figures, and results summary."
+  },
+  "deposit_metadata": {
+    "title": "CurvTrust-PAI: Reference-anchored neighbourhood-overlap residual for network intrusion analysis and trust-based safety filtering in multi-agent cyber-physical systems",
+    "upload_type": "Software",
+    "publication_date": "2026-11-05",
+    "version": "1.0.0",
+    "language": "English",
+    "access_right": "Open Access",
+    "license": "MIT License",
+    "description": "CurvTrust-PAI evaluates a reference-anchored neighbourhood-overlap residual in two independent settings: (1) network-flow intrusion analysis (auxiliary feature + conformal detector) and (2) trust-conditioned safety filtering in a simulated multi-agent swarm. Shared residual; no run-time data exchange between modules. Repository includes code, tables, figures and results JSON. Public datasets are not redistributed.",
+    "authors": [
+      {
+        "name": "Saumya Mishra",
+        "affiliation": "Department of Computer Science and Engineering, Motilal Nehru National Institute of Technology Allahabad (MNNIT Allahabad), Prayagraj 211004, Uttar Pradesh, India",
+        "orcid": ""
+      },
+      {
+        "name": "Shailendra Mishra",
+        "affiliation": "Department of Computer Engineering, College of Computer and Information Sciences, Majmaah University, Al-Majmaah 11952, Saudi Arabia",
+        "orcid": ""
+      }
+    ],
+    "keywords": [
+      "Intrusion detection",
+      "Neighbourhood overlap",
+      "Jaccard similarity",
+      "Trust estimation",
+      "Conformal calibration",
+      "Control barrier functions",
+      "Cyber-physical systems",
+      "Multi-agent systems",
+      "IoT security",
+      "Residual anomaly score",
+      "Network security",
+      "Safety filter"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/REPLACE_WITH_USERNAME/CurvTrust-PAI",
+        "relation": "Is supplement to",
+        "resource_type": "Software"
+      }
+    ]
+  },
+  "after_publish": {
+    "doi_format": "10.5281/zenodo.xxxxxxx",
+    "actions": [
+      "Copy the DOI assigned by Zenodo (do not invent one).",
+      "Add badge to README.md under ## DOI:",
+      "  [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxxxxxx.svg)](https://doi.org/10.5281/zenodo.xxxxxxx)",
+      "Replace data_availability.doi_placeholder in results/results.json.",
+      "Update the manuscript Data Availability Statement with the real DOI.",
+      "Send GitHub URL, Zenodo record URL, and DOI to co-authors."
+    ]
+  },
+  "checklist_before_publish": [
+    "GitHub repo named CurvTrust-PAI is public (or accessible to Zenodo)",
+    "Release v1.0.0 exists and is selected in Zenodo",
+    "Title matches manuscript",
+    "Authors and affiliations match manuscript (order: Saumya Mishra, Shailendra Mishra)",
+    "No ORCID invented — leave blank if not verified",
+    "No passwords, API keys, private paths, or dataset dumps in the archive",
+    "Version is 1.0.0",
+    "License is MIT",
+    "Description and keywords are complete"
+  ]
+}

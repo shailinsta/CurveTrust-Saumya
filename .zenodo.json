@@ -1,8 +1,12 @@
 {
   "title": "CurvTrust-PAI: Reference-anchored neighbourhood-overlap residual for network intrusion analysis and trust-based safety filtering in multi-agent cyber-physical systems",
-  "description": "CurvTrust-PAI evaluates a reference-anchored neighbourhood-overlap residual (absolute deviation of a Jaccard neighbourhood-overlap score from its median over a clean reference set) in two independent settings: (1) network-flow intrusion analysis, where the residual is used as an auxiliary classifier feature and as a stand-alone conformal detector; and (2) trust-conditioned safety filtering in a simulated multi-agent swarm, where the residual is combined with identity, kinematic innovation and graph-isolation evidence to set the separation margin of a relative-degree-two barrier filter. The repository contains the experimental pipeline (digital intrusion detection + swarm trust/HOCBF filter), extracted tables and figures from the manuscript, and aggregated results JSON. Datasets are third-party and not redistributed.",
+  "description": "<p><strong>CurvTrust-PAI</strong> evaluates a reference-anchored neighbourhood-overlap residual (absolute deviation of a Jaccard neighbourhood-overlap score from its median over a clean reference set) in two independent settings:</p><ol><li><strong>Network-flow intrusion analysis</strong> — residual as an auxiliary classifier feature and as a stand-alone conformal detector on UNSW-NB15, NF-ToN-IoT-v2, NF-CSE-CIC-IDS2018-v2, CIDDS-001 and Custom-EdgeIoT.</li><li><strong>Trust-conditioned safety filtering</strong> in a simulated multi-agent swarm — residual combined with identity, kinematic innovation and graph-isolation evidence to set the separation margin of a relative-degree-two barrier filter.</li></ol><p>The two modules share the residual implementation but exchange no data at run time. The repository contains the experimental pipeline, extracted tables and figures from the manuscript, and aggregated results JSON. Public datasets are third-party and not redistributed.</p>",
   "upload_type": "software",
   "publication_date": "2026-11-05",
+  "version": "1.0.0",
+  "language": "eng",
+  "access_right": "open",
+  "license": "mit",
   "creators": [
     {
       "name": "Mishra, Saumya",
@@ -10,10 +14,10 @@
     },
     {
       "name": "Mishra, Shailendra",
-      "affiliation": "Department of Computer Engineering, College of Computer and Information Sciences, Majmaah University, Al-Majmaah 11952, Saudi Arabia",
-      "orcid": ""
+      "affiliation": "Department of Computer Engineering, College of Computer and Information Sciences, Majmaah University, Al-Majmaah 11952, Saudi Arabia"
     }
   ],
+  "contributors": [],
   "keywords": [
     "Intrusion detection",
     "Neighbourhood overlap",
@@ -24,19 +28,34 @@
     "Cyber-physical systems",
     "Multi-agent systems",
     "IoT security",
-    "Residual anomaly score"
+    "Residual anomaly score",
+    "Network security",
+    "Safety filter"
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/<your-username>/CurvTrust-PAI",
+      "identifier": "https://github.com/REPLACE_WITH_USERNAME/CurvTrust-PAI",
       "relation": "isSupplementTo",
-      "resource_type": "software"
+      "resource_type": "software",
+      "scheme": "url"
     }
   ],
-  "access_right": "open",
-  "license": "mit",
+  "references": [
+    "Mishra S., Mishra S. Reference-anchored neighbourhood-overlap residual for network intrusion analysis and trust-based safety filtering in multi-agent cyber-physical systems. Computer Networks (under review / in press), 2026."
+  ],
+  "notes": "After Zenodo publishes this deposit, copy the assigned DOI (10.5281/zenodo.xxxxxxx) into README.md (DOI section) and into results/results.json under data_availability.doi_placeholder. Public datasets (UNSW-NB15, NF-ToN-IoT-v2, NF-CSE-CIC-IDS2018-v2, CIDDS-001) must be obtained from their original sources; they are not included in this archive.",
   "communities": [],
-  "version": "1.0.0",
-  "language": "eng",
-  "notes": "DOI placeholder: replace after Zenodo publishes the record. Public datasets (UNSW-NB15, NF-ToN-IoT-v2, NF-CSE-CIC-IDS2018-v2, CIDDS-001) must be obtained from their original sources. Custom-EdgeIoT and full experiment outputs follow the paper data-availability statement."
+  "grants": [],
+  "subjects": [
+    {
+      "term": "Computer security",
+      "identifier": "https://id.loc.gov/authorities/subjects/sh90001862",
+      "scheme": "url"
+    },
+    {
+      "term": "Intrusion detection systems (Computer security)",
+      "identifier": "https://id.loc.gov/authorities/subjects/sh2011004285",
+      "scheme": "url"
+    }
+  ]
 }
